@@ -1,0 +1,33 @@
+@import "../../scss/global";
+
+.movie-trailer {
+    position    : fixed;
+    top         : 0;
+    left        : 0;
+    right       : 0;
+    bottom      : 0;
+    background  : rgba(0,0,0,0.6);
+    z-index     : 6000;
+
+    .close {
+        text-align: right;
+
+        button {
+            padding     : 1em;
+            background  : $accent;
+            color       : $light;
+            border      : none;
+        }
+    }
+
+    .pure-g {
+        max-width   : 64em;
+        margin      : 3em auto;
+    }
+
+    iframe {
+        width       : 100%;
+        max-height  : 600px;
+        border      : none;
+    }
+}

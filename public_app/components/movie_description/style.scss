@@ -1,0 +1,27 @@
+@import "../../scss/global";
+
+.movie-description {
+    padding     : 0 3em;
+
+    .release-date,
+    .genre {
+        opacity     : 0.6;
+        margin      : 0;
+        padding     : 0;
+    }
+
+    h2 {
+        font-size   : 2em;
+        color       : $text;
+    }
+
+    h3 {
+        margin-top  : 2em;
+        color       : $text;
+    }
+
+    .cast {
+        list-style  : square;
+        color       : $text;
+    }
+}

@@ -1,0 +1,27 @@
+@import "../../scss/global";
+
+.movie-poster {
+    position    : relative;
+
+    img {
+        width       : 100%;
+    }
+    
+    i {
+        position    : absolute;
+        top         : 50%;
+        left        : 50%;
+        transform   : translate(-50%, -50%);
+        font-size   : 3em;
+        color       : $light;
+        background  : $accent;
+        padding     : 0.5em;
+        opacity     : 0.5;
+        cursor      : pointer;
+    }
+    
+    i:hover {
+        opacity     : 1;
+    }
+    
+}
