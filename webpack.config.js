@@ -33,7 +33,8 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("style.css"),
         new CopyWebpackPlugin([
-            { from: "assets/img", to: "img" }
+            { from: "assets/img", to: "img" },
+            { from: "assets/html" }
         ], {})
     ]
 };

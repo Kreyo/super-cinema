@@ -5,27 +5,27 @@
     margin-left : -1em;
     
     .movie-item {
+        background  : black;
 
         &.center {
-            margin-top  : -2em;
+            top         : -2em;
+            position    : relative;
             box-shadow  : 0 0 1em rgba(0,0,0,0.5);
             z-index     : 3000;
         }
 
-        &.center::after {
-            display     : none;
+        & img {
+            opacity     : 0.5;
         }
 
-        &::after {
-            content     : " ";
-            position    : absolute;
-            top         : 0;
-            left        : 0;
-            width       : 100%;
-            height      : 100%;
-            background  : black;
-            opacity     : 0.3;
+        &.center img {
+            opacity     : 1;
         }
+
+        &:hover .description {
+            bottom      : -100%;
+        }
+
 
         .forward,
         .backward {

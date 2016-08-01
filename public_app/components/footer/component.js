@@ -7,7 +7,7 @@ export default class extends React.Component {
         return (
             <div className={"footer " + this.props.className}>
                 <span>All rights reserved to chicken banana &copy; 2016</span>
-                <span>This is an example site built to show the front-end reactJS skills</span>
+                <span>This is an example site built with reactJS and ExpressJS</span>
                 <span>Author - Kristaps Keselis</span>
             </div>
         );

@@ -26,7 +26,7 @@ export default class extends React.Component {
         return (
             <div className={"site-title " + this.props.className}>
                 <Link to="/">
-                    <img src={titleImg} />
+                    <img src={"/" + titleImg} />
                     <h1>Super cinema</h1>
                 </Link>
                 <span>{this.getSlogan()}</span>

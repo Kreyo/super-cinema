@@ -23,6 +23,10 @@ $accent         : $pills;
     box-sizing: border-box;
 }
 
+.pure-g {
+    display: block;
+}
+
 body {
     background  : url("/img/bg_avengers.jpg") no-repeat;
     background-size: 100% auto; 
