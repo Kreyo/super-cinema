@@ -8,6 +8,11 @@ import Footer           from "../components/footer/component"
 
 
 export default class extends React.Component {
+    constructor(props) {
+        super(props);
+        document.title = `Super Cinema - the best cinema in the world!`;
+    }
+
     render() {
         return (
             <div className="pure-g">
