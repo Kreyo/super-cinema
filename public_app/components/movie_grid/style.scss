@@ -1,0 +1,25 @@
+@import "../../scss/global";
+
+.movie-grid {
+    padding     : 2em;
+    margin-top  : 4em;
+
+    .grid-title {
+        color       : $dark;
+        letter-spacing: 0.1em;
+    }
+
+    ul {
+        margin      : 0;
+        padding     : 0;
+        list-style  : none;
+
+        li {
+            padding     : 1em;
+
+            .movie-item {
+                box-shadow  : 0 0 0.5em rgba(0,0,0,0.3);
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../scss/global";
+
+.footer {
+    background  : $accent;
+    padding     : 5em 3em;
+    color       : $light;
+
+    span {
+        display : block;
+        text-align  : center;
+        line-height : 2em;
+    }
+}

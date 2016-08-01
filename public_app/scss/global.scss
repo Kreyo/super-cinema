@@ -1,0 +1,41 @@
+/* Colors */
+$aoi            : rgb(105,210,231);
+$pondwater      : rgb(167,219,216);
+$beach          : rgb(224,228,204);
+$goldfish       : rgb(243,134,48);
+$pills          : rgb(250, 105, 0);
+$light          : rgb(240, 240, 240);
+$dark           : rgb(20, 20, 20);
+/* Colors uses */
+$link           : $aoi;
+$link-visited   : $pondwater;
+$background     : black;
+$content-bg     : $light;
+$text           : $dark;
+$border         : $dark;
+$highlight      : $goldfish;
+$hover          : $pills;
+$accent         : $pills;
+
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background  : url("/img/bg_avengers.jpg") no-repeat;
+    background-size: 100% auto; 
+    background-color: $background;
+    background-position: center 0;
+    background-attachment: fixed;
+}
+
+#app {
+    background  : $light;
+    margin      : 0 auto;
+    max-width   : 64em;
+    margin-top  : 4em;
+    color       : $text;
+    box-shadow  : 0 0 0.5em rgba(0,0,0,0.3);
+}
