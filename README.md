@@ -8,7 +8,7 @@
     > https://www.mongodb.com/download-center#community
 - Clone the repository
 - Run `npm install`
-- Run `npm run webpack`
+- Run `npm run webpack-client` and `npm run webpack-server`
 - Run `npm run start`
 - Visit the site on `localhost:8080`
 

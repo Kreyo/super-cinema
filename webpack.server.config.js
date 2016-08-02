@@ -1,13 +1,15 @@
 var fs = require('fs');
 
+// Making a list of node_modules ot exclude from webpack transforms
+// Excluding all binaries and transforming rest
 var nodeModules = {};
 fs.readdirSync('node_modules')
-  .filter(function(x) {
-    return ['.bin'].indexOf(x) === -1;
-  })
-  .forEach(function(mod) {
-    nodeModules[mod] = 'commonjs ' + mod;
-  });
+    .filter(function(x) {
+        return ['.bin'].indexOf(x) === -1;
+    })
+    .forEach(function(mod) {
+        nodeModules[mod] = 'commonjs ' + mod;
+    });
 
 
 module.exports = {
