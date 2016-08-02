@@ -3,6 +3,9 @@
 
 ## How to setup local environment
 
+- Install NodeJS and NPM
+- Install MongoDB
+    > https://www.mongodb.com/download-center#community
 - Clone the repository
 - Run `npm install`
 - Run `npm run webpack`
