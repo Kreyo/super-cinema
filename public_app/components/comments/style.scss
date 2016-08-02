@@ -1,0 +1,10 @@
+@import "../../scss/global";
+
+.comments {
+    padding     : 4em;
+
+    h3 {
+        color       : $text; 
+        font-size   : 2em;
+    }
+}

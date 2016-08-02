@@ -1,0 +1,21 @@
+@import "../../scss/global";
+
+.comments-input {
+
+    .author,
+    .comment {
+        width       : 100%;
+        padding     : 0.25em;
+        border      : none;
+    }
+
+    .author:focus,
+    .comment:focus {
+        border      : 1px solid $accent;
+    }
+
+    .comment {
+        background  : white;
+        margin-top  : 0.25em;
+    }
+}
