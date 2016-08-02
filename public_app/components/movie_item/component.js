@@ -1,14 +1,16 @@
-import React from "react"
-import { Link } from "react-router"
+import React        from "react"
+import { Link }     from "react-router"
 
-import style from "./style.scss"
+import style        from "./style.scss"
+
+import placeholder  from "./placeholder.png"
 
 export default class MovieItem extends React.Component {
     render() {
         return (
             <div className={"movie-item " + this.props.className}>
-                <Link to="/movie/magic"> 
-                    <img src={this.props.poster} />
+                <Link to={`/movie/${this.props.id}`}> 
+                    <img src={this.props.poster !== "N/A" ? this.props.poster : "/" + placeholder} />
 
                     <div className="description">
                         <h3>{this.props.title}</h3>

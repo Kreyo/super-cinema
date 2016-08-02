@@ -6,7 +6,7 @@ export default class extends React.Component {
     render() {
         return (
             <div className={"search-box " + this.props.className}>
-                <input type="text" placeholder="Search for movie" />
+                <input onChange={this.props.onSearch} type="text" placeholder="Search for movie" />
             </div>
         );
     }

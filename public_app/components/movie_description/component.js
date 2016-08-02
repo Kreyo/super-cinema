@@ -1,32 +1,40 @@
-import React from "react"
+import React        from "react"
+import { connect }  from "react-redux"
 
-import style from "./style.scss"
+import style        from "./style.scss"
 
-export default class extends React.Component {
+class MovieDescription extends React.Component {
     render() {
+        let movie = this.props.movies[this.props.id];
         return (
             <div className={"movie-description " + this.props.className}>
-                <h2 className="title">Movie title</h2>
-                <p className="release-date">Released in 2003</p>
-                <p className="genre">Action, horror</p>
+                <h2 className="title">{movie.Title}</h2>
+                <p className="release-date">{movie.Released}</p>
+                <p className="genre">{movie.Genre}</p>
 
                 <h3>Description</h3>
                 <p className="plot">
-                    I am a movie description that is booring and short
+                    {movie.Plot}
                 </p>
 
                 <h3>Director</h3>
-                <p>John Bumshmit</p>
+                <p>{movie.Director}</p>
 
                 <h3>Cast</h3>
                 <ul className="cast">
-                    <li>Ben Chapleck</li>
-                    <li>Captain crisp</li>
-                    <li>Bannana banderosa</li>
-                    <li>Steeven Sequel</li>
-                    <li>John "the magic" Mickey</li>
+                    {movie.Actors.split(",").map((actor) => {
+                        return <li key={actor}>{actor}</li>;
+                    })}
                 </ul>
             </div>
         );
     }
 }
+
+export default connect(
+    (state) => {
+        return {
+            movies: state.movies
+        };
+    }
+)(MovieDescription);

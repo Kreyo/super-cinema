@@ -11,6 +11,20 @@ export default class extends React.Component {
     constructor(props) {
         super(props);
         document.title = `Super Cinema - the best cinema in the world!`;
+
+        this.state = {
+            filter: ""
+        };
+    }
+
+    setFilter(filter) {
+        this.setState({
+            filter: filter.target.value
+        });
+    }
+
+    searchIsActive() {
+        return this.state.filter === "" ?  false : true;
     }
 
     render() {
@@ -18,13 +32,15 @@ export default class extends React.Component {
             <div className="pure-g">
                 <SiteTitle className="pure-u-2-3" />
 
-                <SearchBox className="pure-u-1-3" />
-
-                <MovieCarousel className="pure-1-1" />
+                <SearchBox
+                    className   = "pure-u-1-3"
+                    onSearch    = {this.setFilter.bind(this)} />
+                { this.searchIsActive() ? "" : <MovieCarousel className="pure-1-1" /> }
 
                 <MovieGrid 
-                    className   ="pure-1-1"
-                    title       ="Newest releases" />
+                    className   = "pure-1-1"
+                    title       = {this.searchIsActive() ? "Search results" : "Available movies"}
+                    filter      = {this.state.filter} />
 
                 <Footer className="pure-u-1" />
             </div>

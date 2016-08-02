@@ -11,6 +11,7 @@
 - Run `npm run webpack-client` and `npm run webpack-server`
 - Run mongoDB server with `--dbpath` of the `db/` folder in project root
     > ex. `mongod.exe --dbpath "path/to/project/db"`
+- Run `node initializeDB.js` to initialize the mongoDB
 - Run `npm run start`
 - Visit the site on `localhost:8080`
 

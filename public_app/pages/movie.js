@@ -17,9 +17,13 @@ export default class extends React.Component {
                 <div className="pure-u-1">
                     <div className="pure-g movie-page-wrapper">
 
-                        <MoviePoster className="pure-u-1-3" />
+                        <MoviePoster 
+                            className   ="pure-u-1-3"
+                            id          ={this.props.params.id} />
 
-                        <MovieDescription className="pure-u-2-3" />
+                        <MovieDescription 
+                            className   ="pure-u-2-3"
+                            id          ={this.props.params.id} />
 
                     </div>
                 </div>

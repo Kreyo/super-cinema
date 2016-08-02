@@ -19,7 +19,7 @@ export default class extends React.Component {
     }
 
     getSlogan() {
-        return this.slogans[Math.random() * 3.99 | 0];
+        return this.slogans[(Date.now() / 10000 | 0) % 4];
     }
 
     render() {
