@@ -2,6 +2,8 @@
 import React        from "react"
 import React_dom    from "react-dom"
 import { Router, Route, browserHistory, IndexRoute } from "react-router"
+import store        from "./redux"
+import { Provider } from "react-redux"
 
 import HomePage     from "./pages/home"
 import MoviePage    from "./pages/movie"
@@ -14,14 +16,16 @@ import globalStyle  from "./scss/global.scss"
 
 React_dom.render((
 
-    <Router history = { browserHistory }>
-        <Route path="/"             component = { HomePage } />
-        <Route path="/"             component = { Wrapper }>
-            <Route path="/movie/:id"    component = { MoviePage } />
-            <Route path="/register"     component = { RegisterPage } />
-            <Route path="/login"        component = { LoginPage } />
-        </Route>
-    </Router>
+    <Provider store={store}>
+        <Router history = { browserHistory }>
+            <Route path="/"             component = { HomePage } />
+            <Route path="/"             component = { Wrapper }>
+                <Route path="/movie/:id"    component = { MoviePage } />
+                <Route path="/register"     component = { RegisterPage } />
+                <Route path="/login"        component = { LoginPage } />
+            </Route>
+        </Router>
+    </Provider>
 
     ), document.getElementById('app')
 );

@@ -1,29 +1,49 @@
-import React from "react"
+import React                        from "react"
+import { connect }                  from "react-redux"
+import { changeVideoVisibility }    from "../../redux_actions"
 
-import MovieTrailer from "../movie_trailer/component"
+import MovieTrailer                 from "../movie_trailer/component"
 
-import style from "./style.scss"
+import style                        from "./style.scss"
 
-export default class extends React.Component {
+class MoviePoster extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            playerVisible: false
+            playerVisible: props.playerVisible || false
         };
     }
 
-    togglePlayer() {
-        this.setState({playerVisible: !this.state.playerVisible});
+    componentWillReceiveProps(newProps) {
+        if (typeof newProps.playerVisible !== "undefined") {
+            this.setState({playerVisible: newProps.playerVisible});
+        }
     }
 
     render() {
         return (
             <div className={"movie-poster " + this.props.className}>
                 <img src="http://lorempixel.com/300/400" />
-                <i className="material-icons" onClick={this.togglePlayer.bind(this)}>play_circle_filled</i>
+                <i className="material-icons" onClick={this.props.togglePlayer.bind(this, true)}>play_circle_filled</i>
 
-                {this.state.playerVisible ? <MovieTrailer closeAction={this.togglePlayer.bind(this)} /> : ""}
+                {this.state.playerVisible ? <MovieTrailer closeAction={this.props.togglePlayer.bind(this, false)} /> : ""}
             </div>
         );
     }
 }
+ 
+// Redux nonsense
+export default connect(
+    (state) => {
+        return {
+            playerVisible: state.options.video_player_visible
+        }
+    },
+    (dispatch) => {
+        return {
+            togglePlayer: (visibility) => {
+                dispatch(changeVideoVisibility(visibility));
+            }
+        }
+    }
+)(MoviePoster);
