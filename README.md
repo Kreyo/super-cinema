@@ -1,3 +1,5 @@
+![Screenshot](assets/img/readme_img.png)
+
 # Super cinema
 > *Greatest cinema service in the universe!
 
