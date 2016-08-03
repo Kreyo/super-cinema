@@ -21,9 +21,9 @@ React_dom.render((
             <Route path="/"             component = { HomePage } />
             <Route path="/"             component = { Wrapper }>
                 <Route path="/movie/:id"    component = { MoviePage } />
-                <Route path="/register"     component = { RegisterPage } />
-                <Route path="/login"        component = { LoginPage } />
             </Route>
+            <Route path="/register"     component = { RegisterPage } />
+            <Route path="/login"        component = { LoginPage } />
         </Router>
     </Provider>
 

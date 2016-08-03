@@ -31,6 +31,19 @@ const commentSchema = mongoose.Schema({
     comment     : String
 });
 
+const userSchema = mongoose.Schema({
+    username    : String,
+    hash        : String,
+    salt        : String,
+});
+
+const sessionSchema = mongoose.Schema({
+    sessionID   : String,
+    username    : String
+});
+
 export const Movie      = mongoose.model("movie", movieSchema);
 export const Comment    = mongoose.model("comment", commentSchema); 
+export const User       = mongoose.model("user", userSchema);
+export const Session    = mongoose.model("session", sessionSchema);
 

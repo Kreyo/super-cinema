@@ -13,28 +13,32 @@ fs.readdirSync('node_modules')
 
 
 module.exports = {
-    entry: './server_app/app.js',
-    target: "node",
-    externals: nodeModules,
+    entry       : './server_app/app.js',
+    target      : "node",
+    externals   : nodeModules,
     output: {
-        path: "./server",
-        filename: "server.js"
+        path        : "./server",
+        filename    : "server.js"
     },
     module: {
          loaders: 
          [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel',
-                query: {
-                   presets: ["es2015"]
+                test    : /\.js$/,
+                exclude : /node_modules/,
+                loader  : 'babel',
+                query   : {
+                   presets  : ["es2015"]
                 }
             },
             {
-                test: /\.json$/,
-                loader: 'json'
+                test    : /\.json$/,
+                loader  : 'json'
             }
         ]
+    },
+    node: {
+        __dirname   : false,
+        __filename  : false
     }
 };
