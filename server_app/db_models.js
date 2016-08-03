@@ -26,7 +26,7 @@ const movieSchema = mongoose.Schema({
 });
 
 const commentSchema = mongoose.Schema({
-    movieId     : String,
+    movieID     : String,
     author      : String,
     comment     : String
 });

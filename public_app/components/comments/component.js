@@ -10,8 +10,10 @@ export default class extends React.Component {
         return (
             <div className={"comments " + this.props.className}>
                 <h3>Comments</h3>
-                <CommentsInput />
-                <CommentsList />
+                <CommentsInput
+                    id={this.props.id} />
+                <CommentsList
+                    id={this.props.id} />
             </div>
         );
     }

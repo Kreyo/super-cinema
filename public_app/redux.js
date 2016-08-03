@@ -13,7 +13,8 @@ let initState = {
     movies  : {},
     options : {
         video_player_visible: false
-    }
+    },
+    comments: {}
 };
 
 

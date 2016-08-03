@@ -1,3 +1,15 @@
+@import "../../scss/global";
+
 .comments-list {
-    
+    list-style  : none;
+    margin      : 0 0 0 1em;
+
+    h4 {
+        color       : $text;
+    }
+
+    p {
+        color       : $text;
+        padding     : 1em;
+    }
 }

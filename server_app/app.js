@@ -1,9 +1,10 @@
 // Express server
 
-import express      from "express"
-import mongoose     from "mongoose"
+import express          from "express"
+import mongoose         from "mongoose"
 
-import movies_route from "./movies_route"
+import movies_route     from "./movies_route"
+import comments_route   from "./comments_route"
 
 mongoose.connect("mongodb://localhost");
 
@@ -26,6 +27,7 @@ db.once('open', function() {
 
     // REST API routes
     app.use("/api/movies", movies_route);
+    app.use("/api/comments", comments_route);
 
     
     console.log(`ExpressJS server started on port ${port}`);

@@ -5,8 +5,8 @@
     .author,
     .comment {
         width       : 100%;
-        padding     : 0.25em;
-        border      : none;
+        padding     : 0.5em;
+        border      : 1px solid transparent;
     }
 
     .author:focus,
@@ -17,5 +17,19 @@
     .comment {
         background  : white;
         margin-top  : 0.25em;
+    }
+
+    .submit {
+        padding     : 0.5em;
+        margin-top  : 0.25em;
+        background  : $accent;
+        color       : $light;
+        border      : 1px solid transparent;
+    }
+
+    .submit:active {
+        border      : 1px solid $accent;
+        background  : $light;
+        color       : $text;
     }
 }

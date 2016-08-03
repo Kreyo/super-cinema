@@ -33,6 +33,36 @@ let movieReducer = (movies, action) => {
     }
 };
 
+// Comment object reducer
+let commentReducer = (comments, action) => {
+    switch(action.type) {
+        
+    case actions.ADD_COMMENTS_TO_MOVIE:
+        let newComments = {};
+        if (comments[action.id]) {
+            newComments[action.id] = comments[action.id].concat(action.comments);
+            
+            return Object.assign(
+                {},
+                comments,
+                newComments
+            );
+        } else {
+            newComments[action.id] = action.comments;
+
+            return Object.assign(
+                {},
+                comments,
+                newComments
+            );
+        }
+    
+    default:
+        return comments;
+
+    }
+};
+
 // Redux reducer that calculates new states when actions are passed to it
 export default function(state, action) {
     switch(action.type) {
@@ -44,6 +74,10 @@ export default function(state, action) {
     case actions.ADD_MOVIES_TO_LIST:
         return Object.assign({}, state, {
             movies: movieReducer(state.movies, action)
+        });
+    case actions.ADD_COMMENTS_TO_MOVIE:
+        return Object.assign({}, state, {
+            comments: commentReducer(state.comments, action)
         });
 
     default:
