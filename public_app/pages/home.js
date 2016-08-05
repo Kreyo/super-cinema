@@ -5,6 +5,7 @@ import SearchBox        from "../components/search_box/component"
 import MovieCarousel    from "../components/movie_carousel/component"
 import MovieGrid        from "../components/movie_grid/component"
 import Footer           from "../components/footer/component"
+import LoginStatus      from "../components/login_status/component"
 
 
 export default class extends React.Component {
@@ -30,6 +31,7 @@ export default class extends React.Component {
     render() {
         return (
             <div className="pure-g">
+                <LoginStatus className="pure-u-1" />
                 <SiteTitle className="pure-u-2-3" />
 
                 <SearchBox

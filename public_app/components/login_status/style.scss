@@ -1,0 +1,24 @@
+@import "../../scss/global";
+
+.login-status {
+    padding     : 2em;
+    margin-top  : -4.5em;
+    text-align  : right;
+
+    .box,
+    i {
+        display     : inline-block;   
+        color       : $light;
+    }
+
+    i {
+        vertical-align: bottom;
+    }
+
+    .username {
+        padding-right: 1em;
+    }
+    .logout {
+        cursor      : pointer;
+    }
+}

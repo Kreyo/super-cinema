@@ -6,9 +6,9 @@ import reducer          from "./redux_reducers"
 
 let initState = {
     user    : {
-        name    : null,
-        token   : null,
-        logged_in: false
+        username    : null,
+        sessionID   : null,
+        logged_in   : false
     },
     movies  : {},
     options : {

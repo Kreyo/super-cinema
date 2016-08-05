@@ -62,6 +62,30 @@ let commentReducer = (comments, action) => {
 
     }
 };
+// User login logout reducer
+let userReducer = (user, action) => {
+    switch(action.type) {
+    
+    case actions.ADD_USER_DATA:
+        return Object.assign({}, user, {
+            username: action.username,
+            sessionID: action.sessionID,
+            logged_in: true
+        });
+
+    case actions.CLEAR_USER_DATA:
+        return Object.assign({}, user, {
+            username: null,
+            sessionID: null,
+            logged_in: false
+        });
+
+    default:
+        return user;
+    }
+}
+
+
 
 // Redux reducer that calculates new states when actions are passed to it
 export default function(state, action) {
@@ -78,6 +102,11 @@ export default function(state, action) {
     case actions.ADD_COMMENTS_TO_MOVIE:
         return Object.assign({}, state, {
             comments: commentReducer(state.comments, action)
+        });
+    case actions.ADD_USER_DATA:
+    case actions.CLEAR_USER_DATA:
+        return Object.assign({}, state, {
+            user: userReducer(state.user, action)
         });
 
     default:

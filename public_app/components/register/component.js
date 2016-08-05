@@ -6,7 +6,7 @@ import style    from "./style.scss"
 
 import logo     from "./small_logo.png" 
 
-export default class Login extends React.Component {
+export default class Register extends React.Component {
 
     constructor(props) {
         super(props);
@@ -14,21 +14,25 @@ export default class Login extends React.Component {
         this.state = {
             username    : "",
             password    : "",
-            loginFailed : false
+            registrationFailed: false
         };
+
     }
 
-    login() {
-        axios.post("/api/auth", {
+    register() {
+        axios.post("/api/auth/register", {
                 username    : this.state.username,
                 password    : this.state.password
             })
             .then((res) => {
-                browserHistory.push("/");
+                this.setState({
+                    registrationFailed : false 
+                });
+                browserHistory.push("/login");
             })
             .catch((error) => {
                 this.setState({
-                    loginFailed : true
+                    registrationFailed : true
                 });
             });
     }
@@ -37,14 +41,15 @@ export default class Login extends React.Component {
         return (
             <div className="pure-g login">
                 <div className="pure-u-1-2 sign-in">
-                    {this.state.loginFailed ?
+                    {this.state.registrationFailed ?
                         <div className="error">
                             <i className="material-icons">error_outline</i>
-                            Username or password was incorrect
+                            Registration failed, either user exists or
+                            we have technical issues.
                         </div>
                     : ""}
 
-                    <h2>Sign in</h2>
+                    <h2>Sign up</h2>
                     <input type="text" placeholder="Username" onChange={(ev) => {
                         this.setState({
                             username    : ev.target.value
@@ -55,7 +60,7 @@ export default class Login extends React.Component {
                             password    : ev.target.value
                         });
                     }} />
-                    <button type="button" onClick={this.login.bind(this)}>Sign in</button>
+                    <button type="button" onClick={this.register.bind(this)}>Sign up</button>
                 </div>
 
                 <div className="pure-u-1-2 register">
@@ -65,9 +70,6 @@ export default class Login extends React.Component {
                         all in HD quality ready for streaming to your devices
                         at the speed of light!
                     </p>
-                    <Link to="/register">
-                        <button type="button">Create an account</button>
-                    </Link>
                 </div>
             </div> 
         );

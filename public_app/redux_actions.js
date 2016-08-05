@@ -3,7 +3,9 @@
 export let actions = {
     CHANGE_VIDEO_VISIBILITY     : "CHANGE_VIDEO_VISIBILITY",
     ADD_MOVIES_TO_LIST          : "ADD_MOVIES_TO_LIST",
-    ADD_COMMENTS_TO_MOVIE       : "ADD_COMMENTS_TO_MOVIE"
+    ADD_COMMENTS_TO_MOVIE       : "ADD_COMMENTS_TO_MOVIE",
+    ADD_USER_DATA               : "ADD_USER_DATA",
+    CLEAR_USER_DATA             : "CLEAR_USER_DATA"
 };
 
 export function changeVideoVisibility(visible) {
@@ -23,5 +25,17 @@ export function addCommentsToMovie(comments, movieID) {
         type    : actions.ADD_COMMENTS_TO_MOVIE,
         comments: comments,
         id      : movieID 
+    };
+}
+export function addUserData(username, sessionID) {
+    return {
+        type    : actions.ADD_USER_DATA,
+        username: username,
+        sessionID: sessionID
+    };
+}
+export function clearUserData() {
+    return {
+        type    : actions.CLEAR_USER_DATA
     };
 }

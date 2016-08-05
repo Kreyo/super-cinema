@@ -10,9 +10,15 @@ class CommentsInput extends React.Component {
     constructor(props) {
         super(props);
 
+        if(this.props.user.logged_in) {
+            var author = `${this.props.user.username} (Registered user)`;
+        } else {
+            var author = "";
+        }
+
         this.state = {
-            "author"    : "",
-            "comments"  : ""
+            author  : author,
+            comments: ""
         };
     }
 
@@ -30,15 +36,16 @@ class CommentsInput extends React.Component {
     render() {
         return (
             <div className="comments-input">
-                <input 
-                    className="author"
-                    type="text"
-                    placeholder="Author"
-                    onChange={(ev) => {
-                        this.setState({
-                            author: ev.target.value
-                        });
-                    }} />
+                {!this.props.user.logged_in ?
+                    <input 
+                        className="author"
+                        type="text"
+                        placeholder="Author"
+                        onChange={(ev) => {
+                            this.setState({
+                                author: ev.target.value
+                            });
+                        }} /> : "" }
 
                 <textarea
                     className="comment"
@@ -61,7 +68,11 @@ class CommentsInput extends React.Component {
     }
 }
 export default connect(
-    (state) => { return {}; },
+    (state) => { 
+        return {
+            user: state.user
+        }; 
+    },
     (dispatch) => {
         return {
             setComments: (comments, movieID) => {
