@@ -3,6 +3,16 @@
 # Super cinema
 > *Greatest cinema service in the universe!
 
+## Features
+
+- React front-end
+- ExpressJS server with MongoDB for data storage
+- Search results update instantly
+- Movie carousel
+- Comments from annonymous and registered users
+- Login and register functionality
+- Redux data storage
+
 ## How to setup local environment
 
 - Install NodeJS and NPM
