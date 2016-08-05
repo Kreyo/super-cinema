@@ -35,7 +35,7 @@
 - SASS
 - MongoDB
 - Redux
-- ExpressJS
+- ExpressJS (NodeJS)
 
 ## Credits
 
