@@ -1,3 +1,12 @@
+/* Dabase initialization file
+
+    Adds a collection names movies with the movies defined below.
+    
+    Warning! Because it has no disconnect it will add the records
+    but will not exit, just exit with ctrl+c
+*/
+
+
 var mongoose = require("mongoose")
 
 mongoose.connect("mongodb://localhost/");

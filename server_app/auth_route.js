@@ -1,3 +1,5 @@
+/*  Defines all routes for authorization */
+
 import express              from "express"
 import crypto               from "crypto"
 import bodyParser           from "body-parser"
@@ -8,6 +10,7 @@ import sessionLib           from "./session"
 
 let router = express.Router();
 
+// Parses post request JSON data and adds values to req.body
 router.use(bodyParser.json());
 
 router.route("/")

@@ -1,3 +1,10 @@
+/* Webpack server build file
+
+    Builds the server app and puts in server folder.
+    Builds from source code in server_app folder.
+
+*/
+
 var fs = require('fs');
 
 // Making a list of node_modules ot exclude from webpack transforms
@@ -37,6 +44,9 @@ module.exports = {
             }
         ]
     },
+    // important so webpack does not stub these values and
+    // they could be used in code, otherwise they will be "/" 
+    // and "/filename"
     node: {
         __dirname   : false,
         __filename  : false

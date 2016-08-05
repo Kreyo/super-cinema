@@ -1,3 +1,5 @@
+/* Defines mongoDB database models so they are easily accessable from routes */
+
 import mongoose from "mongoose"
 
 // All Database models

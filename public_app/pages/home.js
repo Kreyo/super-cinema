@@ -1,3 +1,10 @@
+/* Home page
+
+    Root module that has all the others page specific
+    modules added inside
+
+*/
+
 import React from "react"
 
 import SiteTitle        from "../components/site_title/component"

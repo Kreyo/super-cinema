@@ -1,3 +1,5 @@
+/* Wrapper for pages so header and footer modules would be on the page without adding them */
+
 import React from "react"
 
 import SiteTitle    from "./components/site_title/component"

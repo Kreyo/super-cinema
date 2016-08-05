@@ -1,3 +1,5 @@
+/* Redux initialization file */
+
 import { createStore }  from "redux"
 import reducer          from "./redux_reducers"
 

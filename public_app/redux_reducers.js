@@ -1,3 +1,5 @@
+/* Defines how actions will be handles to update store state */
+
 import { actions } from "./redux_actions"
 
 

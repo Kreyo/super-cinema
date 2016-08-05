@@ -1,4 +1,11 @@
-// Express server
+/* Root server file
+
+    Creates an express server and
+    adds all the routes to it and runs it
+
+    Also adds a logger for each request to server
+
+*/
 
 import express          from "express"
 import mongoose         from "mongoose"
