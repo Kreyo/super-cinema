@@ -17,7 +17,7 @@ import globalStyle  from "./scss/global.scss"
 
 React_dom.render((
 
-    <Provider store={store}> // Wrapper for react redux magic
+    <Provider store={store}>
         <Router onUpdate={() => window.scrollTo(0, 0)} history = { browserHistory }>
             <Route path="/"             component = { HomePage } />
             <Route path="/"             component = { Wrapper }>
