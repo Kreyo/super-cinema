@@ -31,6 +31,14 @@ class CommentsInput extends React.Component {
 
         this.props.setComments([ comment ], this.props.id);
         axios.post(`/api/comments/${this.props.id}`, comment);
+
+        this.clearCommentField();
+    }
+
+    clearCommentField() {
+        this.setState({
+            comments: ""
+        });
     }
 
     render() {
@@ -54,7 +62,8 @@ class CommentsInput extends React.Component {
                         this.setState({
                             comments: ev.target.value
                         });
-                    }} />
+                    }} 
+                    value={this.state.comments}/>
 
                 <button 
                     className="submit"

@@ -21,7 +21,7 @@ export default class extends React.Component {
                             width="100%"
                             height="600px"
                             className="video"
-                            src="https://www.youtube.com/embed/Q7y8oHI-W3M?autoplay=1"
+                            src={"https://www.youtube.com/embed/" + this.props.trailer + "?autoplay=1"}
                             frameBorder="0"
                             allowFullScreen>
                         </iframe>

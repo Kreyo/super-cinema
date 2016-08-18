@@ -35,7 +35,8 @@ db.once('open', function() {
         imdbVotes: String,
         imdbID: String,
         Type: String,
-        Response: String
+        Response: String,
+        Trailer: String
     });
     var MovieModel = mongoose.model("movie", movieSchema);
 
@@ -62,13 +63,14 @@ var movieList = [
     "Language": "English, Sindarin",
     "Country": "New Zealand, USA",
     "Awards": "Won 4 Oscars. Another 108 wins & 122 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BNTEyMjAwMDU1OV5BMl5BanBnXkFtZTcwNDQyNTkxMw@@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/bxVxZb5O9OxCO0oRUNdCnpy9NST.jpg",
     "Metascore": "92",
     "imdbRating": "8.8",
     "imdbVotes": "1,229,475",
     "imdbID": "tt0120737",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "V75dMMIW2B4"
   },
   {
     "Title": "Matrix",
@@ -91,7 +93,8 @@ var movieList = [
     "imdbID": "tt0106062",
     "Type": "series",
     "totalSeasons": "N/A",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "mVGSBxob8B0"
   },
   {
     "Title": "The Shawshank Redemption",
@@ -107,13 +110,14 @@ var movieList = [
     "Language": "English",
     "Country": "USA",
     "Awards": "Nominated for 7 Oscars. Another 15 wins & 21 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg",
     "Metascore": "80",
     "imdbRating": "9.3",
     "imdbVotes": "1,668,622",
     "imdbID": "tt0111161",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "NmzuHjWmXOc"
   },
   {
     "Title": "Batman",
@@ -129,13 +133,14 @@ var movieList = [
     "Language": "English, French",
     "Country": "USA, UK",
     "Awards": "Won 1 Oscar. Another 9 wins & 22 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/kBf3g9crrADGMc2AMAMlLBgSm2h.jpg",
     "Metascore": "69",
     "imdbRating": "7.6",
     "imdbVotes": "266,989",
     "imdbID": "tt0096895",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "dgC9Q0uhX70"
   },
   {
     "Title": "Toy Story",
@@ -151,13 +156,14 @@ var movieList = [
     "Language": "English",
     "Country": "USA",
     "Awards": "Nominated for 3 Oscars. Another 23 wins & 18 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTgwMjI4MzU5N15BMl5BanBnXkFtZTcwMTMyNTk3OA@@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/uMZqKhT4YA6mqo2yczoznv7IDmv.jpg",
     "Metascore": "92",
     "imdbRating": "8.3",
     "imdbVotes": "611,558",
     "imdbID": "tt0114709",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "KYz2wyBy3kc"
   },
   {
     "Title": "Avengers: Age of Ultron",
@@ -173,13 +179,14 @@ var movieList = [
     "Language": "English",
     "Country": "USA",
     "Awards": "2 wins & 37 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/t90Y3G8UGQp0f0DrP60wRu9gfrH.jpg",
     "Metascore": "66",
     "imdbRating": "7.5",
     "imdbVotes": "447,454",
     "imdbID": "tt2395427",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "tmeOjFno6Do"
   },
   {
     "Title": "Iron Man",
@@ -195,13 +202,14 @@ var movieList = [
     "Language": "English, Persian, Urdu, Arabic, Hungarian",
     "Country": "USA",
     "Awards": "Nominated for 2 Oscars. Another 19 wins & 61 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/s2IG9qXfhJYxIttKyroYFBsHwzQ.jpg",
     "Metascore": "79",
     "imdbRating": "7.9",
     "imdbVotes": "689,098",
     "imdbID": "tt0371746",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "8hYlB38asDY"
   },
   {
     "Title": "Good Will Hunting",
@@ -217,13 +225,14 @@ var movieList = [
     "Language": "English",
     "Country": "USA",
     "Awards": "Won 2 Oscars. Another 20 wins & 53 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTk0NjY0Mzg5MF5BMl5BanBnXkFtZTcwNzM1OTM2MQ@@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/jq8LjngZ7XZEQge5JFTdOGMrHyZ.jpg",
     "Metascore": "70",
     "imdbRating": "8.3",
     "imdbVotes": "595,222",
     "imdbID": "tt0119217",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "PaZVjZEFkRs"
   },
   {
     "Title": "Godfather",
@@ -239,13 +248,14 @@ var movieList = [
     "Language": "Malayalam",
     "Country": "India",
     "Awards": "2 wins.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BZTkyYzc5MGEtYTBiYS00ZmYyLThlZWUtOWY3ZWE4ZDhlN2MzXkEyXkFqcGdeQXVyMjM0ODk5MDU@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/qprBPhg4QOijdTsoboT6pvcA2AT.jpg",
     "Metascore": "N/A",
     "imdbRating": "8.5",
     "imdbVotes": "862",
     "imdbID": "tt0353496",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "sY1S34973zA"
   },
   {
     "Title": "The Godfather: Part II",
@@ -261,13 +271,14 @@ var movieList = [
     "Language": "English, Italian, Spanish, Latin, Sicilian",
     "Country": "USA",
     "Awards": "Won 6 Oscars. Another 10 wins & 20 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BNDc2NTM3MzU1Nl5BMl5BanBnXkFtZTcwMTA5Mzg3OA@@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/tHbMIIF51rguMNSastqoQwR0sBs.jpg",
     "Metascore": "80",
     "imdbRating": "9.0",
     "imdbVotes": "784,338",
     "imdbID": "tt0071562",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "8PyZCU2vpi8"
   },
   {
     "Title": "How to Train Your Dragon",
@@ -283,13 +294,14 @@ var movieList = [
     "Language": "English",
     "Country": "USA",
     "Awards": "Nominated for 2 Oscars. Another 25 wins & 58 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjA5NDQyMjc2NF5BMl5BanBnXkFtZTcwMjg5ODcyMw@@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/zMAm3WYmvD40FaWFsOmpicQFabz.jpg",
     "Metascore": "74",
     "imdbRating": "8.2",
     "imdbVotes": "478,315",
     "imdbID": "tt0892769",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "oKiYuIsPxYk"
   },
   {
     "Title": "How to Train Your Dragon 2",
@@ -305,13 +317,14 @@ var movieList = [
     "Language": "English",
     "Country": "USA",
     "Awards": "Nominated for 1 Oscar. Another 13 wins & 59 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/lRjOR4uclMQijUav4OjeZprlehu.jpg",
     "Metascore": "76",
     "imdbRating": "7.9",
     "imdbVotes": "218,247",
     "imdbID": "tt1646971",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "Z9a4PvzlqoQ"
   },
   {
     "Title": "The Soviet Story",
@@ -327,13 +340,14 @@ var movieList = [
     "Language": "English",
     "Country": "Latvia",
     "Awards": "1 nomination.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjE3NDQ4MzUzNV5BMl5BanBnXkFtZTcwMzc0MjAwMg@@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/ynpiZzWMABNF5hw3VWEcGhYOSfd.jpg",
     "Metascore": "N/A",
     "imdbRating": "8.2",
     "imdbVotes": "2,554",
     "imdbID": "tt1305871",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "EYuRKy0HKK8"
   },
   {
     "Title": "Gladiator",
@@ -349,12 +363,13 @@ var movieList = [
     "Language": "English",
     "Country": "USA, UK",
     "Awards": "Won 5 Oscars. Another 53 wins & 101 nominations.",
-    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTgwMzQzNTQ1Ml5BMl5BanBnXkFtZTgwMDY2NTYxMTE@._V1_SX300.jpg",
+    "Poster": "https://image.tmdb.org/t/p/w640/6WBIzCgmDCYrqh64yDREGeDk9d3.jpg",
     "Metascore": "64",
     "imdbRating": "8.5",
     "imdbVotes": "974,954",
     "imdbID": "tt0172495",
     "Type": "movie",
-    "Response": "True"
+    "Response": "True",
+    "Trailer": "W1rNFuKFTnc"
   }
 ];

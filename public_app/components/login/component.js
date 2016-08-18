@@ -59,7 +59,7 @@ export default class Login extends React.Component {
                 </div>
 
                 <div className="pure-u-1-2 register">
-                    <img src={"/" + logo} />
+                    <Link to="/"><img src={"/" + logo} /></Link>
                     <p>
                         Give an experience of your life with thousands of movies
                         all in HD quality ready for streaming to your devices

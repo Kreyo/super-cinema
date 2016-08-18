@@ -14,7 +14,8 @@ export default class Register extends React.Component {
         this.state = {
             username    : "",
             password    : "",
-            registrationFailed: false
+            registrationFailed: false,
+            registrationCompleted: false
         };
 
     }
@@ -26,9 +27,12 @@ export default class Register extends React.Component {
             })
             .then((res) => {
                 this.setState({
-                    registrationFailed : false 
+                    registrationFailed : false, 
+                    registrationCompleted : true 
                 });
-                browserHistory.push("/login");
+                setTimeout(() => {
+                    browserHistory.push("/login");
+                }, 3000);
             })
             .catch((error) => {
                 this.setState({
@@ -49,6 +53,13 @@ export default class Register extends React.Component {
                         </div>
                     : ""}
 
+                    {this.state.registrationCompleted ?
+                        <div className="success">
+                            <i className="material-icons">info_outline</i>
+                            Registration successful! Redirecting to login page
+                        </div>
+                    : ""}
+
                     <h2>Sign up</h2>
                     <input type="text" placeholder="Username" onChange={(ev) => {
                         this.setState({
@@ -64,7 +75,7 @@ export default class Register extends React.Component {
                 </div>
 
                 <div className="pure-u-1-2 register">
-                    <img src={"/" + logo} />
+                    <Link to="/"><img src={"/" + logo} /></Link>
                     <p>
                         Give an experience of your life with thousands of movies
                         all in HD quality ready for streaming to your devices

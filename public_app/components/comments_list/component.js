@@ -27,7 +27,7 @@ class CommentsList extends React.Component {
                         <p>{comment.comment}</p>
                     </li>              
                 )
-            });
+            }).reverse();
         } else {
             return <li><h4>Noone has commented on this movie</h4></li>;
         }

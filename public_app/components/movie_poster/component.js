@@ -31,7 +31,7 @@ class MoviePoster extends React.Component {
                 <img src={movie.Poster !== "N/A" ? movie.Poster : "/" + placeholder } />
                 <i className="material-icons" onClick={this.props.togglePlayer.bind(this, true)}>play_circle_filled</i>
 
-                {this.state.playerVisible ? <MovieTrailer closeAction={this.props.togglePlayer.bind(this, false)} /> : ""}
+                {this.state.playerVisible ? <MovieTrailer trailer={movie.Trailer} closeAction={this.props.togglePlayer.bind(this, false)} /> : ""}
             </div>
         );
     }
